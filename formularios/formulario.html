@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+    <h1>Formulario de solicitud de viaje</h1>
+
+    <br>
+
+    <p>Completa el formulario antes de viajar</p>
+    <br><br>
+
+    <form action="/formularios/permisoViaje.html" method="get">
+        <br>
+        <label for="nom">Nombres</label>
+        <input type="text" name="nombre" id="nom" placeholder="Ingrese nombre" pattern=".{2,40}"
+            title="Debe contener más de dos letras" required>
+        <br>
+        <br>
+        <label for="ape">Apellidos</label>
+        <input type="text" name="apellido" id="ape" placeholder="Ingrese apellido" pattern=".{2,50}"
+            title="Debe contener más de dos letras" required>
+        <br>
+        <br>
+        <label for="dni">DNI</label>
+        <input type="number" name="dni" id="dni" required>
+
+        <br><br>
+
+        <label for="fotoDNI">Foto DNI (frente y dorso)</label>
+        <input type="file" name="fotoDNI" id="fotoDNI" multiple required accept="image/*">
+
+        <br><br>
+
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+        <br><br>
+        <label for="tel">Teléfono</label>
+        <input type="tel" name="tel" id="tel" pattern=".[0-9]{8,20}" required>
+
+        <br><br>
+
+        <label for="pass">Contraseña</label>
+        <input type="password" name="pass" id="pass" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Debe contener numeros, al menos una mayuscula y una minuscula y no menos de 8 caracteres" required>
+        <br><br>
+
+        <label for="prov">¿A qué provincia viajará?</label>
+        <br>
+        <select name="provincia" id="prov" required>
+            <option aria-placeholder="" default hidden>Seleccione una provincia</option>
+            <br>
+            <option value="1">Mendoza</option>
+            <option value="2">Neuquén</option>
+            <option value="3">Buenos Aires</option>
+            <option value="4">Chubut</option>
+            <option value="5">Misiones</option>
+            <option value="6">San Juan</option>
+            <option value="7">Cordoba</option>
+            <option value="8">San Luis</option>
+            <option value="9">Tierra del Fuego</option>
+
+            <!---option[value="$"]{Nombre}*9-->
+
+
+        </select>
+
+        <br><br>
+
+        <label for="fecha">Fecha de viaje</label>
+        <input type="date" name="fecha de viaje" id="fecha" required>
+
+        <br><br>
+        <label for="obser">Observaciones</label>
+        <br>
+        <textarea name="observaciones" id="obser" cols="100" rows="5" maxlength="100" class="textRed"></textarea>
+
+
+        <br>
+        <br>
+        <label for="mes">En que mes viaja?</label>
+        <br>
+        <input type="radio" name="mes" value="1">"Enero"
+        <br>
+        <input type="radio" name="mes" value="2">"Febrero"
+        <br>
+        <input type="radio" name="mes" value="3">"Marzo"
+        <br>
+        <input type="radio" name="mes" value="4">"Abril"
+        <br>
+        <input type="radio" name="mes" value="5">"Mayo"
+        <br>
+        <input type="radio" name="mes" value="6">"Junio"
+        <br>
+        <input type="radio" name="mes" value="7">"Julio"
+        <br>
+        <input type="radio" name="mes" value="8">"Agosto"
+        <br>
+        <input type="radio" name="mes" value="9">"Septiembre"
+        <br>
+        <input type="radio" name="mes" value="10">"Octubre"
+        <br>
+        <input type="radio" name="mes" value="11">"Noviembre"
+        <br>
+        <input type="radio" name="mes" value="12">"Diciembre"
+
+        <br>
+        <br>
+        <label for="">Viajas con mascota?</label>
+        <br>
+        <input type="checkbox" name="mascota1" id="1">"Perro"
+        <br>
+        <input type="checkbox" name="mascota2" id="2">"Gato"
+        <br>
+        <input type="checkbox" name="mascotaNo" id="3">"Viajo sin mascota"
+
+        <br>
+        <br>
+        <label for="codigoPostal">Codigo Postal</label>
+        <br>
+        <input type="text" id="codigoPostal" name="codigoPostal" pattern="[0-9]{4,}" title="Ingrese 4 números"
+            required="">
+
+        <br>
+        <br>
+        <input type="submit" value="Enviar" id="submit">
+
+    </form>
+    <br> <br>
+    <p id="publicidad">Esto es una Publicidad</p>
+
+    <div>
+        Esto es un contenedor div
+    </div>
+    <div class="textGreen">
+        <span style="font-size: 2rem; color: black; background-color: transparent;">E</span>sto también es un contenedor
+        div que contiene una lista
+        <ol>
+            <li>Ejemplos 1</li>
+            <li>Ejemplos 2</li>
+            <li>Ejemplos 3</li>
+        </ol>
+    </div>
+
+    <span>Ejemplo</span>
+    <span>Ejemplo</span>
+
+
+</body>
+
+</html>
